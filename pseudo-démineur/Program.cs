@@ -9,7 +9,7 @@ namespace pseudo_démineur
     class Program
     {
         //Partie 1
-        static void CreerDemineur1(int[,] demineur)
+        static void CreerDemineur1(int[,] demineur) 
         {
             int x = 0, y = 0;
             for (int i = 0; i < demineur.Length; i++)
