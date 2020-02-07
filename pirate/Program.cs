@@ -11,7 +11,7 @@ namespace pirate
         public static Random random = new Random();
         static void Main(string[] args)
         {
-            int longueurMDP = 4;
+            int longueurMDP = 6;
             Routeur routeur = new Routeur(longueurMDP, true);
             Pirate pirate = new Pirate(longueurMDP, routeur);
             Console.WriteLine(routeur.GetPassword());

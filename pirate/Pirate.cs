@@ -8,16 +8,17 @@ namespace pirate
 {
     class Pirate
     {
-        private int longueurRouteur, cpt = 0, maxEssais = 0, niveau;
+        private int longueurRouteur, cpt = 0, niveau;
+        public string maxEssais = "";
         private bool alphanum;
         public Pirate(int longueurRouteur, Routeur routeur)
         {
             alphanum = routeur.GetAlphanum();
             this.longueurRouteur = longueurRouteur;
             if (alphanum)
-                maxEssais = Convert.ToInt32(Math.Pow(Convert.ToDouble(36), Convert.ToDouble(longueurRouteur)));
+                maxEssais = Convert.ToString(Math.Pow(Convert.ToDouble(36), Convert.ToDouble(longueurRouteur)));
             else
-                maxEssais = Convert.ToInt32(Math.Pow(Convert.ToDouble(10), Convert.ToDouble(longueurRouteur)));
+                maxEssais = Convert.ToString(Math.Pow(Convert.ToDouble(10), Convert.ToDouble(longueurRouteur)));
         }
         public void PiraterRouteur(Routeur routeur)
         {
@@ -86,7 +87,7 @@ namespace pirate
         {
             return cpt;
         }
-        public int GetNbEssaisMax()
+        public string GetNbEssaisMax()
         {
             return maxEssais;
         }
